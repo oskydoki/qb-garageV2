@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QB Garages</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div id="garage-container" class="container">
+        <!-- Main garage view -->
+        <div id="main-view">
+            <div class="header">
+                <h1 id="garage-header" class="garage-title">Garage</h1>
+                <p class="garage-subtitle">Vehicle Storage</p>
+            </div>
+            <div id="vehicle-container" class="vehicle-list">
+                <!-- Vehicles will be populated here -->
+            </div>
+        </div>
+        
+        <!-- Transfer modal view -->
+        <div id="transfer-modal" class="transfer-modal">
+            <div class="transfer-header">
+                <h2 id="transfer-title" class="transfer-title">Transfer Vehicle</h2>
+                <p id="transfer-subtitle" class="transfer-subtitle">Transfer vehicle ownership to another player</p>
+            </div>
+            
+            <div id="transfer-vehicle-info" class="transfer-vehicle-info">
+                <div class="transfer-vehicle-icon">
+                    <i class="fas fa-car"></i>
+                </div>
+                <div class="transfer-vehicle-details">
+                    <h3 id="transfer-vehicle-name">Vehicle Name</h3>
+                    <p id="transfer-vehicle-plate">Plate</p>
+                </div>
+            </div>
+            
+            <div class="transfer-form">
+                <div class="form-group">
+                    <label for="player-id" id="player-id-label" class="form-label">Player ID</label>
+                    <input 
+                        type="number" 
+                        id="player-id" 
+                        class="form-input" 
+                        placeholder="Enter player ID"
+                        min="1"
+                    >
+                </div>
+            </div>
+            
+            <div class="transfer-fee-info">
+                <p id="fee-text" class="fee-text">A 2% transfer fee will be charged</p>
+                <p id="transfer-fee" class="fee-amount">$0</p>
+            </div>
+            
+            <div class="transfer-actions">
+                <button id="btn-back" class="btn btn-back">Cancel</button>
+                <button id="btn-confirm-transfer" class="btn btn-confirm-transfer" disabled>Transfer</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
